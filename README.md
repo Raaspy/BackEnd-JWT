@@ -53,8 +53,28 @@ npm install
 - SECRET_KEY_JWY
 - JWT_EXPIRATION
 
-4. **Inicia el servidor**:
+4. **Crea la tabla de base de datos (PostgreSQL)**:
+Para usar este proyecto, es necesario que tu base de datos contenga una tabla llamada **usuarios** con los siguientes atributos:
+
+- **id**: Clave primaria, autoincremental.
+- **name**: Nombre del usuario.
+- **email**: (Único), correo utilizado para la autenticación.
+- **password**: Contraseña cifrada del usuario.
+- **created_at**: Fecha de creación del usuario.
+
+Asegúrate de que la tabla esté configurada correctamente para que el sistema funcione de manera adecuada.  
+En PostgreSQL, la consulta SQL para crear la tabla podría ser algo como:
+
+CREATE TABLE usuarios (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+5. **Inicia el servidor**:
 npm start
 
-5. **Prueba las rutas**:
+6. **Prueba las rutas**:
 Puedes probar las rutas usando **Postman** o cualquier cliente HTTP.
