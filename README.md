@@ -35,6 +35,11 @@ Este proyecto es un sistema de **autenticación de usuarios** utilizando **JSON 
 
 ---
 
+## 🛡️ Seguridad y Recomendaciones
+Este sistema utiliza JWT para asegurar las sesiones de los usuarios.
+> Asegúrate de proteger adecuadamente tu clave secreta (SECRET_KEY_JWY) y otras variables sensibles. Si planeas usar este sistema en un entorno de producción, considera la implementación de medidas adicionales, como la **revocación de tokens** o **tokens de refresco.**
+
+---
 ## 🔧 Instalación y Uso
 
 1. **Clona el repositorio**:
