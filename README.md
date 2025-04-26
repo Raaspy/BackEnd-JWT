@@ -44,7 +44,7 @@ Este sistema utiliza JWT para asegurar las sesiones de los usuarios.
 ## 🔧 Instalación y Uso
 
 1. **Clona el repositorio**:
-git clone https://github.com/tu_usuario/tu_repositorio.git
+git clone https://github.com/Raaspy/BackEnd-JWT.git
 
 2. **Instala las dependencias**:
 npm install
