@@ -44,10 +44,14 @@ Este sistema utiliza JWT para asegurar las sesiones de los usuarios.
 ## 🔧 Instalación y Uso
 
 1. **Clona el repositorio**:
+```
 git clone https://github.com/Raaspy/BackEnd-JWT.git
+```
 
 2. **Instala las dependencias**:
+```
 npm install
+```
 
 3. **Configura las variables de entorno (.env)**:
 - PORT
@@ -62,15 +66,16 @@ npm install
 4. **Crea la tabla de base de datos (PostgreSQL)**:
 Para usar este proyecto, es necesario que tu base de datos contenga una tabla llamada **usuarios** con los siguientes atributos:
 
-- **id**: Clave primaria, autoincremental.
-- **name**: Nombre del usuario.
-- **email**: (Único), correo utilizado para la autenticación.
-- **password**: Contraseña cifrada del usuario.
-- **created_at**: Fecha de creación del usuario.
+- **`id`**: Clave primaria, autoincremental.
+- **`name`**: Nombre del usuario.
+- **`email`**: (Único), correo utilizado para la autenticación.
+- **`password`**: Contraseña cifrada del usuario.
+- **`created_at`**: Fecha de creación del usuario.
 
 Asegúrate de que la tabla esté configurada correctamente para que el sistema funcione de manera adecuada.  
 En PostgreSQL, la consulta SQL para crear la tabla podría ser algo como:
 
+```
 CREATE TABLE usuarios (
     id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -78,9 +83,12 @@ CREATE TABLE usuarios (
     password VARCHAR(255) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+```
 
 5. **Inicia el servidor**:
+```
 npm start
+```
 
 6. **Prueba las rutas**:
-Puedes probar las rutas usando **Postman** o cualquier cliente HTTP.
+Puedes probar las rutas usando **`Postman`** o cualquier cliente HTTP.
